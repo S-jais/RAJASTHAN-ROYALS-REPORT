@@ -58,9 +58,14 @@ if pressure_filter != "All":
     filtered = filtered[filtered["pressure_category"] == pressure_filter.lower()]
 
 # Match selector
-matches = filtered[["match_id", "comp_name", "match_date"]].drop_duplicates().sort_values("match_date", ascending=False)
+match_cols = [c for c in ["match_id", "comp_name", "match_date"] if c in filtered.columns]
+matches = filtered[match_cols].drop_duplicates()
 if "match_date" in matches.columns:
+    matches = matches.sort_values("match_date", ascending=False)
+if "match_date" in matches.columns and "comp_name" in matches.columns:
     matches["label"] = matches["match_id"].astype(str) + " — " + matches["comp_name"].fillna("") + " (" + matches["match_date"].astype(str).str[:10] + ")"
+elif "comp_name" in matches.columns:
+    matches["label"] = matches["match_id"].astype(str) + " — " + matches["comp_name"].fillna("")
 else:
     matches["label"] = matches["match_id"].astype(str)
 
@@ -118,7 +123,7 @@ if selected_match_label:
     st.markdown("### Ball-by-Ball Details")
     
     display_cols = [
-        "innings", "overid", "over_ball_num", "striker_name", "bowler_name",
+        "innings", "innings_ball_num", "overid", "over_ball_num", "striker_name", "bowler_name",
         "batter_runs", "total_runs", "is_wicket", "dismissal_type",
         "pressure_index", "pressure_category",
         "cum_runs_before", "cum_wickets_before", "balls_remaining",
@@ -127,8 +132,12 @@ if selected_match_label:
     ]
     available = [c for c in display_cols if c in match_df.columns]
     
+    # Sort first on match_df so that available columns don't constrain sorting
+    sort_cols = [c for c in ["innings", "innings_ball_num", "overid", "over_ball_num"] if c in match_df.columns]
+    sorted_df = match_df.sort_values(sort_cols) if sort_cols else match_df
+    
     st.dataframe(
-        match_df[available].sort_values(["innings", "innings_ball_num"]),
+        sorted_df[available],
         hide_index=True,
         use_container_width=True,
         height=400,
@@ -139,10 +148,12 @@ st.markdown("---")
 st.markdown("### 🔥 Highest Pressure Deliveries")
 
 top_pressure = df.nlargest(20, "pressure_index")
-display = top_pressure[["match_id", "innings", "overid", "over_ball_num", 
-                         "striker_name", "bowler_name", "batter_runs", 
-                         "is_wicket", "pressure_index", "pressure_category",
-                         "balls_remaining", "wickets_remaining", "comp_name"]].copy()
+wanted_cols = ["match_id", "innings", "overid", "over_ball_num", 
+               "striker_name", "bowler_name", "batter_runs", 
+               "is_wicket", "pressure_index", "pressure_category",
+               "balls_remaining", "wickets_remaining", "comp_name"]
+avail_top = [c for c in wanted_cols if c in top_pressure.columns]
+display = top_pressure[avail_top].copy()
 display = display.rename(columns={
     "pressure_index": "PI", "striker_name": "Batter", "bowler_name": "Bowler",
     "batter_runs": "Runs", "comp_name": "Competition"
