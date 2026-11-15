@@ -91,11 +91,19 @@ if selected_match_label:
     fig = go.Figure()
     
     for inn in sorted(match_df["innings"].unique()):
-        inn_df = match_df[match_df["innings"] == inn].sort_values("innings_ball_num")
+        inn_df = match_df[match_df["innings"] == inn]
+        if "innings_ball_num" in inn_df.columns:
+            inn_df = inn_df.sort_values("innings_ball_num")
+            x_vals = inn_df["innings_ball_num"]
+        elif "overid" in inn_df.columns and "over_ball_num" in inn_df.columns:
+            inn_df = inn_df.sort_values(["overid", "over_ball_num"])
+            x_vals = inn_df["overid"] * 6 + inn_df["over_ball_num"]
+        else:
+            x_vals = np.arange(1, len(inn_df) + 1)
         
         color = "#4ade80" if inn == 1 else "#ef4444"
         fig.add_trace(go.Scatter(
-            x=inn_df["innings_ball_num"],
+            x=x_vals,
             y=inn_df["pressure_index"],
             mode="lines+markers",
             name=f"Innings {inn}",
