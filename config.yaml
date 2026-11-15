@@ -1,0 +1,88 @@
+# PRESSURE IQ Configuration
+# Cricket Performance Intelligence — SupeRR Selector Season 2
+
+project:
+  name: "PRESSURE IQ"
+  subtitle: "Cricket Performance Intelligence — SupeRR Selector Season 2"
+  version: "2.0.0"
+
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  output_dir: "outputs"
+
+pressure_index:
+  # Weights for PI components (must sum to 1.0)
+  first_innings:
+    resource_weight: 0.45
+    phase_weight: 0.35
+    par_score_weight: 0.20
+  second_innings:
+    chase_urgency_weight: 0.45
+    resource_weight: 0.25
+    phase_weight: 0.15
+    match_competitiveness_weight: 0.15
+
+  # Pressure classification thresholds (percentile-based)
+  high_pressure_percentile: 75  # Top 25% (High Pressure)
+  normal_pressure_percentile: 25  # Bottom 25%
+
+  alt_thresholds:
+    - high: 80
+      normal: 20
+    - high: 70
+      normal: 30
+
+batting:
+  # Minimum qualifying criteria
+  min_pressure_balls: 60
+  min_normal_balls: 60
+  min_total_balls: 150
+  min_matches: 5
+  min_pressure_matches: 4
+  
+  # Empirical Bayes shrinkage prior scale
+  prior_sample: 75.0
+  
+  # Rating weights
+  context_adjusted_weight: 0.35
+  pressure_uplift_weight: 0.30
+  consistency_weight: 0.20
+  reliability_weight: 0.15
+
+bowling:
+  # Minimum qualifying criteria
+  min_pressure_balls: 60   # 10 overs
+  min_normal_balls: 60
+  min_total_balls: 150
+  min_matches: 5
+  min_pressure_matches: 4
+  
+  # Empirical Bayes shrinkage prior scale
+  prior_sample: 75.0
+  
+  # Rating weights
+  context_adjusted_weight: 0.35
+  pressure_uplift_weight: 0.30
+  wicket_impact_weight: 0.15
+  consistency_weight: 0.10
+  reliability_weight: 0.10
+
+cricket:
+  bowler_wickets:
+    - "Bowled"
+    - "Caught"
+    - "LBW"
+    - "Stump"
+    - "Hit Wicket"
+  
+  non_bowler_wickets:
+    - "RunOut"
+    - "Retire Out"
+    - "Obstracting the field"
+    - "Obstructing the field"
+
+  phases:
+    powerplay: [0, 5]     # Overs 1-6
+    middle: [6, 14]       # Overs 7-15
+    death: [15, 19]       # Overs 16-20

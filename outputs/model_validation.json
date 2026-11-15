@@ -1,0 +1,54 @@
+{
+  "batting_expected_model": {
+    "type": "GradientBoostingRegressor",
+    "n_folds": 5,
+    "validation": "GroupKFold by match_id",
+    "feature_importances": {
+      "innings": 0.0,
+      "over_0idx": 0.0652343088229349,
+      "balls_remaining": 0.058304846583379186,
+      "wickets_remaining": 0.12278979955260541,
+      "pressure_index": 0.07771005603093373,
+      "phase_enc": 0.0,
+      "format_enc": 0.006861205628436808,
+      "cum_runs_before": 0.19467424423191468,
+      "current_rr": 0.3613110950008055,
+      "rrr_safe": 0.027538747983153374,
+      "rr_diff_safe": 0.03901123490310708,
+      "runs_req_safe": 0.0465644612627293
+    }
+  },
+  "bowling_expected_model": {
+    "type": "GradientBoostingRegressor",
+    "n_folds": 5,
+    "validation": "GroupKFold by match_id",
+    "feature_importances": {
+      "innings": 0.004182455382320993,
+      "over_0idx": 0.015526335177956922,
+      "balls_remaining": 0.11038192941074303,
+      "wickets_remaining": 0.10874049200673674,
+      "pressure_index": 0.07465632089163662,
+      "phase_enc": 0.0,
+      "format_enc": 0.00602007799066013,
+      "cum_runs_before": 0.2233585035896479,
+      "current_rr": 0.34420210193473466,
+      "rrr_safe": 0.046563398974119034,
+      "rr_diff_safe": 0.029672553400265454,
+      "runs_req_safe": 0.03669583124117845
+    }
+  },
+  "pressure_index": {
+    "range": [
+      0.0525,
+      0.94925
+    ],
+    "mean": 0.33860548073125785,
+    "percentiles": {
+      "25": 0.20065701219512194,
+      "50": 0.3214828100804924,
+      "75": 0.42531910516375127,
+      "90": 0.5682710699241412,
+      "95": 0.6875350877192982
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "timestamp": "2026-11-15T19:13:29.459814",
+  "datasets": {
+    "ball_by_ball": {
+      "rows": 200999,
+      "columns": 33,
+      "unique_matches": 867,
+      "unique_batters": 888,
+      "unique_bowlers": 647,
+      "innings_values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "missing_values": {
+        "match_id": 0,
+        "innings": 0,
+        "overid": 0,
+        "over_ball_num": 0,
+        "innings_ball_num": 0,
+        "batting_team_id": 0,
+        "bowling_team_id": 0,
+        "striker_id": 0,
+        "striker_name": 0,
+        "non_striker_id": 0,
+        "non_striker_name": 0,
+        "bowler_id": 0,
+        "bowler_name": 0,
+        "batting_type": 0,
+        "bowling_type": 0,
+        "batting_order": 0,
+        "runs": 0,
+        "is_four": 0,
+        "is_six": 0,
+        "is_wicket": 0,
+        "dismissal_type_id": 190118,
+        "dismissal_type": 190118,
+        "dismissed_player_id": 190107,
+        "extras_type": 189167,
+        "extras1_runs": 0,
+        "extras_2_runs": 0,
+        "pace_or_spin": 0,
+        "bowl_speed": 0,
+        "stroke": 6158,
+        "delivery_style": 391,
+        "over_or_around": 407,
+        "on_or_off": 0,
+        "delivery_ist_time": 0
+      },
+      "duplicates": 0,
+      "extras1_runs_values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "total_wickets": 10881,
+      "non_striker_dismissals": 275,
+      "dismissal_types": {
+        "Caught": 7557,
+        "Bowled": 1775,
+        "LBW": 709,
+        "RunOut": 600,
+        "Stump": 214,
+        "Hit Wicket": 17,
+        "Retire Out": 6,
+        "Obstracting the field": 2,
+        "Obstructing the field": 1
+      },
+      "max_over_id": 20
+    },
+    "matches": {
+      "rows": 883,
+      "unique_matches": 883,
+      "matches_with_result": 842,
+      "no_result_matches": 41,
+      "dls_matches": 23,
+      "date_range": [
+        "2022-01-22",
+        "2026-11-01"
+      ]
+    },
+    "competitions": {
+      "rows": 141,
+      "formats": [
+        "T20I",
+        "T20"
+      ],
+      "seasons": [
+        "2022",
+        "2022/23",
+        "2023",
+        "2023/24",
+        "2024",
+        "2024/25",
+        "2025",
+        "2026"
+      ],
+      "ipl_seasons": [
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ]
+    },
+    "cross_validation": {
+      "bbb_matches_in_matches": 867,
+      "orphan_bbb_matches": 0,
+      "orphan_match_records": 16
+    },
+    "players": {
+      "registry_size": 1217,
+      "unique_batters_in_bbb": 888,
+      "unique_bowlers_in_bbb": 647,
+      "unmapped_players": 0
+    }
+  },
+  "warnings": [
+    "16 match_ids in matches with no ball_by_ball data"
+  ],
+  "errors": []
+}

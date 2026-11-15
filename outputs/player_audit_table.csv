@@ -1,0 +1,16 @@
+role,player_id,player_name,competitions,total_matches,pressure_matches,pressure_balls,pressure_runs,pressure_sr,normal_balls,normal_runs,normal_sr,expected_runs_pressure,runs_above_expectation,pressure_uplift_sr,uncertainty_se,ci_95,final_shrunk_rating
+Batter,3647,Shreyas Iyer,"Afghanistan vs India in India T20I Series 2026, Australia in...",98,19.0,287,570,198.61,1578.0,2286.0,144.87,473.2,96.8,53.74,0.0459,"[0.662, 0.842]",0.7522
+Batter,143,Dinesh Karthik,"Australia in India T20I Series 2022, IPL 2022, IPL 2023, IPL...",61,28.0,321,623,194.08,318.0,446.0,140.25,516.2,106.8,53.83,0.0434,"[0.663, 0.834]",0.7485
+Batter,4708,Rinku Singh,"Afghanistan in India T20I Series 2024, Asia Cup 2025, Austra...",83,38.0,480,889,185.21,804.0,1069.0,132.96,758.0,131.0,52.25,0.0355,"[0.667, 0.807]",0.7369
+Batter,8101,Ashutosh Sharma,"Asia Cup Rising Stars 2025, IPL 2024, IPL 2025, IPL 2026...",28,22.0,280,503,179.64,66.0,74.0,112.12,431.4,71.6,67.52,0.0465,"[0.634, 0.816]",0.7248
+Batter,1699,Suryakumar Yadav,"Asia Cup 2025, Australia in India T20I Series 2022, Australi...",139,33.0,540,995,184.26,2219.0,3593.0,161.92,819.8,175.2,22.34,0.0335,"[0.644, 0.776]",0.7099
+Batter,8,Mahendra Singh Dhoni,"IPL 2022, IPL 2023, IPL 2024, IPL 2025...",48,26.0,333,561,168.47,130.0,132.0,101.54,526.1,34.9,66.93,0.0426,"[0.620, 0.787]",0.7038
+Batter,6396,Tim David,"Australia in Bangladesh T20I Series 2026, Australia in Engla...",98,43.0,520,997,191.73,706.0,1181.0,167.28,826.1,170.9,24.45,0.0341,"[0.635, 0.768]",0.7015
+Batter,2756,Shashank Singh,"IPL 2022, IPL 2024, IPL 2025, IPL 2026...",42,24.0,342,615,179.82,218.0,290.0,133.03,548.3,66.7,46.8,0.0421,"[0.612, 0.777]",0.6947
+Batter,6726,Romario Shepherd,"Australia in West Indies T20I Series 2025, Bangladesh in Wes...",68,34.0,473,766,161.95,214.0,293.0,136.92,666.5,99.5,25.03,0.0358,"[0.621, 0.761]",0.6913
+Batter,1318,Andre Russell,"Australia in West Indies T20I Series 2025, England in West I...",57,30.0,377,673,178.51,356.0,581.0,163.2,549.8,123.2,15.31,0.0401,"[0.612, 0.770]",0.691
+Batter,2436,Dasun Shanaka,"Afghanistan in Sri Lanka T20I Series 2024, Asia Cup 2025, Au...",61,32.0,402,633,157.46,372.0,447.0,120.16,584.1,48.9,37.3,0.0388,"[0.613, 0.765]",0.6887
+Batter,20702,Tristan Stubbs,"Australia in South Africa T20I Series 2023, IPL 2022, IPL 20...",69,33.0,487,813,166.94,594.0,803.0,135.19,748.0,65.0,31.76,0.0353,"[0.616, 0.754]",0.6851
+Batter,37052,Naman Dhir,"Asia Cup Rising Stars 2025, IPL 2024, IPL 2025, IPL 2026, In...",46,16.0,174,364,209.2,415.0,628.0,151.33,290.3,73.7,57.87,0.059,"[0.567, 0.799]",0.683
+Batter,3125,Nicholas Pooran,"Bangladesh in West Indies T20I Series 2022, Bangladesh in We...",115,35.0,467,839,179.66,1505.0,2259.0,150.1,734.5,104.5,29.56,0.036,"[0.610, 0.751]",0.6806
+Batter,3605,Aiden Markram,"Australia in South Africa T20I Series 2023, IPL 2022, IPL 20...",94,19.0,279,484,173.48,1393.0,1911.0,137.19,423.9,60.1,36.29,0.0466,"[0.589, 0.772]",0.6804

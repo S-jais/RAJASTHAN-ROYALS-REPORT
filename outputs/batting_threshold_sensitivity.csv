@@ -1,0 +1,31 @@
+striker_id,player_name,batting_pressure_rating,threshold
+8,Mahendra Singh Dhoni,0.7031330080759198,Top 20%
+47,Virat Kohli,0.4121290778877895,Top 20%
+143,Dinesh Karthik,0.7460424869721737,Top 20%
+152,Ravindra Jadeja,0.6070327274413443,Top 20%
+220,David Warner,0.43639352244032403,Top 20%
+305,Ravichandran Ashwin,0.4912322551662174,Top 20%
+494,Kieron Pollard,0.4503939802336029,Top 20%
+507,Mohammad Mahmudullah,0.4374276729559748,Top 20%
+768,Reeza Hendricks,0.5690976818866561,Top 20%
+796,Matthew Wade,0.5903535489667565,Top 20%
+8,Mahendra Singh Dhoni,0.7332153874126067,Top 25%
+47,Virat Kohli,0.4986288004986179,Top 25%
+88,Faf du Plessis,0.5860181771311378,Top 25%
+143,Dinesh Karthik,0.7893754631479596,Top 25%
+152,Ravindra Jadeja,0.5936326209240986,Top 25%
+198,Manish Pandey,0.49581322957198437,Top 25%
+220,David Warner,0.43435334616384,Top 25%
+305,Ravichandran Ashwin,0.44310116731517507,Top 25%
+332,Angelo Mathews,0.6820604893570067,Top 25%
+494,Kieron Pollard,0.5025259403372244,Top 25%
+8,Mahendra Singh Dhoni,0.7126434629236849,Top 30%
+47,Virat Kohli,0.6134608498540419,Top 30%
+88,Faf du Plessis,0.5559029535864979,Top 30%
+126,Rohit Sharma,0.573662447257384,Top 30%
+143,Dinesh Karthik,0.8154623853019408,Top 30%
+152,Ravindra Jadeja,0.5774831444533641,Top 30%
+167,Ajinkya Rahane,0.49024472573839656,Top 30%
+198,Manish Pandey,0.5236643693984541,Top 30%
+220,David Warner,0.4542438256496485,Top 30%
+305,Ravichandran Ashwin,0.44381434599156117,Top 30%
